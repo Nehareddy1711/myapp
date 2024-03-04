@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background: white;
+    color: black;
+    }
+.Cart-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 700px;
+    padding: 50px;
+    left: 10px; 
+    gap: 50px;
+}
