@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App8 from './App8';
+import StateComponent from './StateComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,6 +12,6 @@ root.render(
     {/* <App2 user=""/> */}
     {/* <App3 names={["Neha","Surendra"]}/> */}
     {/* <App3 students={{name:'Surendra',age:24}}/> */}
-    <App8/>
+    <StateComponent/>
   </React.StrictMode>
 );
