@@ -1,27 +1,27 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-// export default function App6() {
+// export default function App12() {
 //   const obj1 = { name: "John",age:20 };
 //   const student = {...obj1, city:'NYC'};
 //   console.log(student);
 // }
 
-// export default function App6() {
+// export default function App12() {
 //   const obj1 = { name: "John",age:20 };
 //   const obj2 = { age: 30 };
 //   const student = {...obj1, ...obj2};
 //   console.log(student);
 // }
 
-// export default function App6() {
+// export default function App12() {
 //   const arr1 = [1,4,5];
 //   const arr2 = [6,8,1];
 //   const newArr = [...arr1, ...arr2];
 //   console.log(newArr);
 // }
 
-// export default function App6() {
+// export default function App12() {
 //   const students = [
 //     { name: "John", age: 34 },
 //     { name: "Cathy", age: 30 },
@@ -31,129 +31,129 @@ import { useState, useEffect } from "react";
 //   console.log(newArray);
 // }
 
-// export default function App6() {
-//   const [student, setStudent] = useState({ name: "", age: "" });
-//   const [students, setStudents] = useState([]);
-//   const addStudent = () => {
-//     student.id = Date.now();
-//     setStudents((prevStudents) => [...prevStudents, student]); //In React, it isn't allowed to change the original state array, so we can't use the push() method. We use the spread syntax (...) to unpack the elements of the existing array into a new array and add another value at the end.
-//     setStudent({ name: "", age: "" });
-//   };
-//   const deleteStudent = (id) => {
-//     setStudents(students.filter((e) => e.id !== id));
-//   };
-//   const editStudent = (value) => {
-//     setStudent(value);
-//     deleteStudent(value.id);
-//   };
-//   return (
-//     <>
-//       <p>
-//         <input
-//           type="text"
-//           value={student.name}
-//           onChange={(e) =>
-//             setStudent((prevStudent) => ({
-//               ...prevStudent,
-//               ...{ name: e.target.value },
-//             }))
-//           }
-//           placeholder="Enter Name"
-//         ></input>
-//       </p>
-//       <p>
-//         <input
-//           type="text"
-//           value={student.age}
-//           onChange={(e) =>
-//             setStudent((prevStudent) => ({
-//               ...prevStudent,
-//               ...{ age: e.target.value },
-//             }))
-//           }
-//           placeholder="Enter Age"
-//         ></input>
-//       </p>
-//       <p>
-//         <button onClick={addStudent}>Add Student</button>
-//       </p>
-//       <div>
-//         {students &&
-//           students.map((value, index) => (
-//             <div key={index}>
-//               {value.id}-{value.name}-{value.age} -
-//               <button onClick={() => deleteStudent(value.id)}>Delete</button>
-//               <button onClick={() => editStudent(value)}>Edit</button>
-//             </div>
-//           ))}
-//       </div>
-//     </>
-//   );
-// }
+export default function App12() {
+  const [student, setStudent] = useState({ name: "", age: "" });
+  const [students, setStudents] = useState([]);
+  const addStudent = () => {
+    student.id = Date.now();
+    setStudents((prevStudents) => [...prevStudents, student]); //In React, it isn't allowed to change the original state array, so we can't use the push() method. We use the spread syntax (...) to unpack the elements of the existing array into a new array and add another value at the end.
+    setStudent({ name: "", age: "" });
+  };
+  const deleteStudent = (id) => {
+    setStudents(students.filter((e) => e.id !== id));
+  };
+  const editStudent = (value) => {
+    setStudent(value);
+    deleteStudent(value.id);
+  };
+  return (
+    <>
+      <p>
+        <input
+          type="text"
+          value={student.name}
+          onChange={(e) =>
+            setStudent((prevStudent) => ({
+              ...prevStudent,
+              ...{ name: e.target.value },
+            }))
+          }
+          placeholder="Enter Name"
+        ></input>
+      </p>
+      <p>
+        <input
+          type="text"
+          value={student.age}
+          onChange={(e) =>
+            setStudent((prevStudent) => ({
+              ...prevStudent,
+              ...{ age: e.target.value },
+            }))
+          }
+          placeholder="Enter Age"
+        ></input>
+      </p>
+      <p>
+        <button onClick={addStudent}>Add Student</button>
+      </p>
+      <div>
+        {students &&
+          students.map((value, index) => (
+            <div key={index}>
+              {value.id}-{value.name}-{value.age} -
+              <button onClick={() => deleteStudent(value.id)}>Delete</button>
+              <button onClick={() => editStudent(value)}>Edit</button>
+            </div>
+          ))}
+      </div>
+    </>
+  );
+}
 
 ///////
 
-export default function App6() {
-    const [student, setStudent] = useState({ name: "", age: "" });
-    const [students, setStudents] = useState([]);
-    const addStudent = () => {
-      setStudents((prevStudents) => [...prevStudents, student]);
-    };
-    const deleteStudent = (name) => {
-      setStudents(students.filter((e) => e.name !== name));
-    };
-    const editStudent = (value) => {
-      setStudent(value);
-      deleteStudent(value.name);
-    };
-    return (
-      <>
-        <p>
-          <input
-            type="text"
-            value={student.name}
-            onChange={(e) =>
-              setStudent((prevStudent) => ({
-                ...prevStudent,
-                ...{ name: e.target.value },
-              }))
-            }
-            placeholder="Enter Name"
-          ></input>
-        </p>
-        <p>
-          <input
-            type="text"
-            value={student.age}
-            onChange={(e) =>
-              setStudent((prevStudent) => ({
-                ...prevStudent,
-                ...{ age: e.target.value },
-              }))
-            }
-            placeholder="Enter Age"
-          ></input>
-        </p>
-        <p>
-          <button onClick={addStudent}>Add Student</button>
-        </p>
-        <div>
-          {students &&
-            students.map((value, index) => (
-              <div key={index}>
-                {value.name}-{value.age} -{" "}
-                <button onClick={() => deleteStudent(value.name)}>Delete</button>
-                <button onClick={() => editStudent(value)}>Edit</button>
-              </div>
-            ))}
-        </div>
-      </>
-    );
-  }
+// export default function App12() {
+//     const [student, setStudent] = useState({ name: "", age: "" });
+//     const [students, setStudents] = useState([]);
+//     const addStudent = () => {
+//       setStudents((prevStudents) => [...prevStudents, student]);
+//     };
+//     const deleteStudent = (name) => {
+//       setStudents(students.filter((e) => e.name !== name));
+//     };
+//     const editStudent = (value) => {
+//       setStudent(value);
+//       deleteStudent(value.name);
+//     };
+//     return (
+//       <>
+//         <p>
+//           <input
+//             type="text"
+//             value={student.name}
+//             onChange={(e) =>
+//               setStudent((prevStudent) => ({
+//                 ...prevStudent,
+//                 ...{ name: e.target.value },
+//               }))
+//             }
+//             placeholder="Enter Name"
+//           ></input>
+//         </p>
+//         <p>
+//           <input
+//             type="text"
+//             value={student.age}
+//             onChange={(e) =>
+//               setStudent((prevStudent) => ({
+//                 ...prevStudent,
+//                 ...{ age: e.target.value },
+//               }))
+//             }
+//             placeholder="Enter Age"
+//           ></input>
+//         </p>
+//         <p>
+//           <button onClick={addStudent}>Add Student</button>
+//         </p>
+//         <div>
+//           {students &&
+//             students.map((value, index) => (
+//               <div key={index}>
+//                 {value.name}-{value.age} -{" "}
+//                 <button onClick={() => deleteStudent(value.name)}>Delete</button>
+//                 <button onClick={() => editStudent(value)}>Edit</button>
+//               </div>
+//             ))}
+//         </div>
+//       </>
+//     );
+//   }
 
 /////////////
 
-// export default function App6() {
+// export default function App12() {
 //     const [student, setStudent] = useState({});
 //     const [students, setStudents] = useState([]);
 //     const addStudent = () => {
@@ -206,7 +206,7 @@ export default function App6() {
 
 /////////////////
 
-// export default function App6() {
+// export default function App12() {
 //     const [student, setStudent] = useState({});
 //     const [students, setStudents] = useState([]);
 //     const addStudent = () => {
@@ -312,7 +312,7 @@ export default function App6() {
 // }
 
 ///////////////
-// export default function App6() {
+// export default function App12() {
 //   const [count, setCount] = useState(1);
 //   console.log(Date());
 //   return (
@@ -325,7 +325,7 @@ export default function App6() {
 // }
 
 ///////////////////
-// export default function App6() {
+// export default function App12() {
 //   const [runs, setRuns] = useState(0);
 //   const [wickets, setWickets] = useState(0);
 //   console.log("Component loaded");
@@ -353,7 +353,7 @@ export default function App6() {
 
 ///////////////
 
-// export default function App6() {
+// export default function App12() {
 //   const [count, setCount] = useState(0);
 //   console.log("Component loaded");
 //   return (
@@ -367,7 +367,7 @@ export default function App6() {
 // }
 
 ///////////////
-// export default function App6() {
+// export default function App12() {
 //   const [count, setCount] = useState(0);
 //   console.log("Component loaded");
 //   return (
