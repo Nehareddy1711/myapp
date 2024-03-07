@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function App1(props) {
+export default function App8(props) {
   return (
     <div style = {{backgroundColor: 'red', color: 'white'}}>
         Hello {props.name}. Are you {props.age}?
