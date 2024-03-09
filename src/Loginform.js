@@ -2,8 +2,8 @@ import React from 'react'
 import { useState} from "react";
 
 export default function Form() {
-    const[username, setUsername] = useState([]);
-    const[password, setPassword] = useState([]);
+    const[username, setUsername] = useState();
+    const[password, setPassword] = useState();
     const[login, setLogin] = useState([]);
 
     const handleSubmit = (e) => {
